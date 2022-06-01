@@ -75,6 +75,11 @@ def get_average_score(dict, name):
     average_score = get_average(scores)
     return average_score
 
+def formatNumber(n, digits):
+    formatter = '{:.' + '{}'.format(digits) + 'f}'
+    x = round(n, digits)
+    return formatter.format(x)
+
 # Test cases
 def test_problem():
     d1 = {'Harsh': [25.0, 26.5, 28.0], 'Anurag': [26.0, 28.0, 30.0]}
@@ -100,4 +105,6 @@ if __name__ == '__main__':
         student_marks[name] = scores
     query_name = input()
     #test_problem()
-    print(round(get_average_score(student_marks, query_name), 2))
+    answer = get_average_score(student_marks, query_name)
+    print(formatNumber(answer, 2))
+    
