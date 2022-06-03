@@ -69,61 +69,12 @@ def apply(commands):
 
 
 
-# List Number Number -> List
-# inserts the integer into the given position in the list
-def insert(input_list, integer, position):
-    new_list = []
-    for x in range(len(input_list)):
-        if x == position:
-            new_list.append(integer)
-            new_list.append(input_list[x])
-        else:
-            new_list.append(input_list[x])
-    return new_list
-
-# List Number -> List
-# removes the first occurrence of the given number
-def remove(input_list, number):
-    for x in range(len(input_list)):
-        if input_list[x] == number:
-            return input_list
-            
-    return input_list
-
-# List Number -> List
-# inserts the given integer at the end of the list.
-def append(output, number):
-    return output
-
-# List -> List
-# sorts the list form low to high
-def sort(output):
-    return output
-
-# List -> List
-# pops the last element from the list
-def pop(output):
-    return output
-
-# List -> List
-# reverses the list
-def reverse(output):
-    return output
-
 # Test cases
 def test_problem():
     
     l1 = [1,2,4]
     l2 = [1,2,1,3]
     
-    assert insert(l1, 3, 2) == [1,2,3,4], "Insert function in middle not right"
-    assert insert(l1, 0, 0) == [0,1,2,4], "Insert function in beginning not right"
-    
-    assert remove(l1, 1) == [2,4], "Remove function in beginning not working"
-    assert remove(l1, 2) == [1,4], "Remove function in middle not working"
-    assert remove(l1, 4) == [1,2], "Remove function in end not working"
-    assert remove(l1, 3) == [1,2,4], "Remove function for missing input not working"
-    assert remove(l2, 1) == [2,1,3], "Remove function for duplicates not working"
     
     
     
