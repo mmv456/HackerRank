@@ -59,32 +59,25 @@ Sample Output 0
 [6, 5, 10]
 [1, 5, 9, 10]
 [9, 5, 1]
-"""
-
-# List -> List
-# takes the list of commands and gets the list of results
-def apply(commands):
-    output = []
-    return output
-
-
-
-# Test cases
-def test_problem():
-    
-    l1 = [1,2,4]
-    l2 = [1,2,1,3]
-    
-    
-    
-    
+""" 
+ 
 if __name__ == '__main__':
     # take in the inputs
-    #n = int(input())
-    #list_of_commands = []
-    #for _ in range(n):
-    #    list_of_commands.append(input())
-    # send the inputs somewhere
-    # get the result back
-    #print(list_of_commands)
-    test_problem()
+    n = int(input())
+    output = []
+    for _ in range(n):
+        line = input().split()
+        if(line[0] == "insert"):
+            output.insert(int(line[1]), int(line[2]))
+        if(line[0] == "print"):
+            print(output)
+        if(line[0] == "remove"):
+            output.remove(int(line[1]))
+        if(line[0] == "append"):
+            output.append(int(line[1]))
+        if(line[0] == "sort"):
+            output.sort()
+        if(line[0] == "pop"):
+            output.pop(len(output) - 1)
+        if(line[0] == "reverse"):
+            output.reverse()
