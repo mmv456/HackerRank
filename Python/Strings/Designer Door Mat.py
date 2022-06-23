@@ -65,5 +65,43 @@ import sys
 
 if __name__ == '__main__':
     n, m = int(input()), int(input())
+    # n is the # of rows
+    # m is the number of columns
     
     sys.stdout.write('Hello\n')
+    sys.stdout.write(str(n))
+    sys.stdout.write('\n')
+    sys.stdout.write(str(m))
+    sys.stdout.write('\n')
+    
+    middle_row = (n // 2)
+    middle_col = (m // 2)
+    
+    for row in range(n):
+        
+        for column in range(m):
+            if ((row == middle_row) & (column == middle_col)):
+                sys.stdout.write('X')
+            else:
+                sys.stdout.write('-')
+            
+        sys.stdout.write('\n')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
