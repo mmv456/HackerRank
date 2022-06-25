@@ -63,6 +63,11 @@ Sample Output
 
 import sys
 
+# Number -> String
+# Outputs the row given the number of columns
+def middle():
+    sys.stdout.write()
+
 if __name__ == '__main__':
     n, m = int(input()), int(input())
     # n is the # of rows
